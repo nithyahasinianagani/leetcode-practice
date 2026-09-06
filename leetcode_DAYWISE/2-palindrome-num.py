@@ -7,3 +7,5 @@
 # Input: x = -121
 # Output: false
 # Explanation: From left to right, it reads -121. From right to left, it becomes 121-. Therefore it is not a palindrome
+x = -121
+print(str(x) == str(x)[::-1])

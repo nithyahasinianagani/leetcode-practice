@@ -1,0 +1,10 @@
+rjust() means right justify → add spaces on the left.
+
+str(i).rjust(width),
+oct(i)[2:].rjust(width),
+hex(i)[2:].upper().rjust(width),
+bin(i)[2:].rjust(width)
+
+
+[2:] removes 0o
+

@@ -5,3 +5,5 @@
 # Example 2:
 # Input: nums = [2,2,1,1,1,2,2]
 # Output: 2
+nums = [3,2,3]
+print(max(nums, key=nums.count))

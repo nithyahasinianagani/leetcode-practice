@@ -12,3 +12,6 @@
 # Input: s = "luffy is still joyboy"
 # Output: 6
 # Explanation: The last word is "joyboy" with length 6.
+
+s = "Hello World"
+print(len(s.split()[-1]))
