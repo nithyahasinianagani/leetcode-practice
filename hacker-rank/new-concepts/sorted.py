@@ -14,12 +14,15 @@ while i < len(a) and j < len(b):
         result.append(b[j])
         j += 1
 
-while i < len(a):
-    result.append(a[i])
-    i += 1
+# while i < len(a):
+#     result.append(a[i])
+#     i += 1   
 
-while j < len(b):
-    result.append(b[j])
-    j += 1
+# while j < len(b):
+#     result.append(b[j])
+#     j += 1
+
+result += a[i:]
+result += b[j:]
 
 print(result)
