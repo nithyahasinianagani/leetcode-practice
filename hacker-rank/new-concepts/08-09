@@ -1,0 +1,63 @@
+import calendar
+
+month, day, year = map(int, input().split())
+
+day_name = calendar.day_name[calendar.weekday(year, month, day)]
+
+print(day_name.upper())\
+
+-------------------------------------
+try:
+    # Try to do this
+except:
+    # If an error happens, handle it here
+
+Why not just write the code normally?
+
+If you write:
+
+print(int(a) // int(b))
+
+and input is:
+
+1 0
+
+Python crashes with an error and doesn't continue to the next test case.
+
+But the question specifically says:
+
+In the case of ZeroDivisionError or ValueError, print the error code.
+
+Therefore, we need try + except to catch the error and print it instead of crashing.
+
+Easy way to remember
+
+try = "Try this code."
+
+except = "If this particular error happens, do this."
+
+
+--------------------------------
+But why _?
+
+Normally you might write:
+
+for i in range(T):
+
+Here i would contain:
+
+0 → first iteration
+1 → second iteration
+2 → third iteration
+
+But we don't actually need those numbers.
+
+We just want to repeat the code 3 times.
+
+So Python convention is to use _:
+
+for _ in range(T):
+
+It means:
+
+"I don't care about the loop variable; I just want to repeat this."
