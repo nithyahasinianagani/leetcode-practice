@@ -1,0 +1,68 @@
+1) ## happiness   checking membership in a set is generally faster than checking membership in a list, especially when there are many numbers.
+Also, a set automatically removes duplicates.
+
+
+n, m = map(int, input().split())
+arr = list(map(int, input().split()))
+A = set(map(int, input().split()))
+B = set(map(int, input().split()))
+
+happiness = 0
+
+for i in arr:
+    if i in A:
+        happiness += 1
+    elif i in B:
+        happiness -= 1
+
+print(happiness)
+
+
+
+2)html
+
+from html.parser import HTMLParser
+
+class MyHTMLParser(HTMLParser):
+    def handle_starttag(self, tag, attrs):
+        print("Start :", tag)
+        for name, value in attrs:
+            print("->", name, ">", value)
+
+    def handle_endtag(self, tag):
+        print("End   :", tag)
+
+    def handle_startendtag(self, tag, attrs):
+        print("Empty :", tag)
+        for name, value in attrs:
+            print("->", name, ">", value)
+
+parser = MyHTMLParser()
+for _ in range(int(input())):
+    parser.feed(input())
+
+
+3)
+
+from html.parser import HTMLParser
+
+class MyHTMLParser(HTMLParser):
+    def handle_comment(self, data):
+        if '\n' in data:
+            print(">>> Multi-line Comment")
+        else:
+            print(">>> Single-line Comment")
+        print(data)
+
+    def handle_data(self, data):
+        if data.strip():
+            print(">>> Data")
+            print(data)
+
+html = ""
+for _ in range(int(input())):
+    html += input().strip()
+
+parser = MyHTMLParser()
+parser.feed(html)
+
